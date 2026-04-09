@@ -1,0 +1,14 @@
+models/
+bert_multiclass/
+__pycache__/
+utils/__pycache__/
+*.pt
+*.pkl
+*.npy
+*.bin
+*.csv
+.env
+venv/
+*.pycupload_to_hf.py
+upload_to_hf.py
+
