@@ -7,6 +7,11 @@ import re
 import string
 from utils.__model_core import predict_bilstm
 from download_models import download_models
+import nltk
+nltk.data.path.append('/opt/render/nltk_data')
+
+from nltk.corpus import stopwords
+from nltk.stem import PorterStemmer
 download_models()
 
 
