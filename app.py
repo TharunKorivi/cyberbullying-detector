@@ -12,6 +12,18 @@ nltk.data.path.append('/opt/render/nltk_data')
 
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
+
+# Ensure resources exist
+try:
+    stop_words = set(stopwords.words('english'))
+except LookupError:
+    nltk.download('stopwords')
+    stop_words = set(stopwords.words('english'))
+
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt')
 download_models()
 
 
