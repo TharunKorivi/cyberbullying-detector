@@ -5,17 +5,10 @@ import numpy as np
 import pickle
 import re
 import string
-import nltk
-from nltk.stem import PorterStemmer
 from utils.__model_core import predict_bilstm
-from nltk.corpus import stopwords
 from download_models import download_models
 download_models()
 
-
-nltk.download('stopwords', quiet=True)
-nltk.download('punkt',     quiet=True)
-nltk.download('punkt_tab', quiet=True)
 
 LABELS = ['Religion', 'Age', 'Ethnicity', 'Gender', 'Not Bullying']
 LABEL_COLORS = {
